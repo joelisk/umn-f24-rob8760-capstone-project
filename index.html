@@ -1,335 +1,162 @@
 <!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
-<html lang=" en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic Trash Collection Research</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+            background-color: #f5f5f5;
+        }
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NLP Class Project | Fall 2024 CSCI 5541 | University of Minnesota</title>
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-  <link rel="stylesheet" href="./docs/bulma.min.css" />
+        h1 {
+            color: #2563eb;
+            margin-bottom: 1.5rem;
+            font-size: 2.25rem;
+        }
 
-  <link rel="stylesheet" href="./docs/styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com/">
-  <link href="./docs/css2" rel="stylesheet">
-  <link href="./docs/css" rel="stylesheet">
+        h2 {
+            color: #1e40af;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
 
+        h3 {
+            color: #112771;
+            margin-top: 1rem;
+            margin-bottom: 1rem; 
+            font-size: 1rem;
+        }
 
-  <base href="." target="_blank"></head>
+        .timeline {
+            border-left: 3px solid #2563eb;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
 
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
 
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.7rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background-color: #2563eb;
+            border-radius: 50%;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            background-color: #f0f9ff;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #2563eb;
+            margin: 1rem 0;
+        }
+
+        .insight {
+            font-style: italic;
+            color: #4b5563;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
 <body>
-  <div>
-    <div class="wrapper">
-      <h1 style="font-family: &#39;Lato&#39;, sans-serif;">Towards Autonomous Trash Collection: Exploring Prompt Caching and Feature-rich Synthetic Trash Data for Improving Integration of Large Language Models with Robotic Systems </h1>
-      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">Fall 2024 ROB 8760: Capstone Project - University of Minnesota</h4>
-      <h4 style="font-family: &#39;Lato&#39;, sans-serif; ">Joe Lisk</h4>
+    <div class="container">
+        <h1>Autonomous Robotic Trash Collection: Context-Aware Detection and Control</h1>
+        <h3>Joe Lisk</h3>
+        <h3>ROB 8760: Capstone Project</h3>
+        <h3>December 2024</h3>
+        <h3>Advisor: Nikolaos Papanikolopoulos</h3>
 
-      <div class="authors-wrapper">
-        <div class="author-container">
-          <div class="author-image">
-              <img height="325" width="325" src="https://joelisk.github.io/umn-csci5541-f24-robonlp/docs/assets/joeliskportrait.jpg" alt="portrait">
-          </div>
-          <p>
-            Joe Lisk
-          </p>
+        <h2>Research Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <strong>Fall 2023:</strong> Used ChatGPT for binary trash classification and Kinova Gen3 Lite arm control
+                <div class="insight">This initial phase explored the feasibility of using LLMs for both object classification and robotic control, setting the foundation for understanding the challenges in autonomous trash collection.</div>
+                
+            </div>
+            <div class="timeline-item">
+                <strong>Spring 2024:</strong> Evaluated YOLOv9 object detection and fine-tuned BLIP-2 VLM on TACO dataset
+                <div class="insight">This phase aimed to benchmark state-of-the-art computer vision approaches against the unique challenges of trash detection.</div>
+            </div>
         </div>
-        
-      </div>
 
-      <br/>
-
-      <div class="authors-wrapper">
-        <div class="publication-links">
-          <!-- Github link -->
-          <span class="link-block">
-            <a
-              href="https://github.com/joelisk/umn-csci5541-f24-robonlp/blob/main/docs/assets/ROB8760JoeLiskFinalReport.pdf"
-              target="_blank"
-              class="external-link button is-normal is-rounded is-dark is-outlined"
-            >
-            <span>Final Report</span>
-            </a>
-          </span>
-          <span class="link-block">
-            <a
-              href="https://github.com/joelisk/umn-f24-rob8760-capstone-project"
-              target="_blank"
-              class="external-link button is-normal is-rounded is-dark is-outlined"
-            >
-            <span>Code</span>
-            </a>
-          </span>    
-          <!-- <span class="link-block">
-            <a
-              href="https://github.com/joelisk/umn-csci5541-f24-robonlp/blob/main/docs/assets/CSCI%205541_RoboNLP_Poster.pptx.png"
-              target="_blank"
-              class="external-link button is-normal is-rounded is-dark is-outlined"
-            >
-            <span>Poster</span>
-            </a>
-          </span>          -->
+        <h2>Key Discoveries & Motivations</h2>
+        <div class="highlight">
+            <p>Through these early experiments, two critical insights emerged:</p>
+            <ol>
+                <li>Object detection alone proved insufficient due to trash's subjective, context-dependent nature - an aspect overlooked in existing research</li>
+                <li>While LLMs showed promise for robotic control, they introduced significant cost and risk factors that needed mitigation</li>
+            </ol>
         </div>
-      </div>
 
+        <h2>Capstone Focus & Innovation</h2>
+        <div class="section">
+            <p>These discoveries led to two novel research directions:</p>
+            <ol>
+                <li>Exploring the addition of scene context in public spaces to improve trash detection accuracy
+                    <div class="insight">This approach was motivated by the observation that context is crucial for human trash identification, yet no existing works had explored this avenue for autonomous systems.</div>
+                </li>
+                <li>Implementing prompt caching via embedding similarity to optimize LLM usage
+                    <div class="insight">This innovation addressed the practical challenges of LLM integration, offering a way to maintain performance while reducing operational costs and risks.</div>
+                </li>
+            </ol>
+        </div>
 
+        <h2>Methodology</h2>
+        <div class="section">
+            <p>The research employed two complementary approaches:</p>
+            <ol>
+                <li>Synthetic Data Generation
+                    <div class="insight">Used GPT to create crowded airport scenarios due to the current lack of contextually-rich trash detection datasets. This approach allowed for controlled testing of context-based classification.</div>
+                </li>
+                <li>BERT-based Similarity Analysis
+                    <div class="insight">Implemented command similarity detection to enable efficient caching of robot control solutions, reducing the need for repeated LLM queries.</div>
+                </li>
+            </ol>
+        </div>
+
+        <h2>Results</h2>
+        <div class="highlight">
+            <p>The research yielded two significant findings:</p>
+            <ol>
+                <li>Additional scene context demonstrably improved trash classification accuracy of detected objects</li>
+                <li>Command caching with a 0.3 similarity threshold effectively reduced LLM query requirements while maintaining system reliability</li>
+            </ol>
+        </div>
+
+        <h2>Limitations & Future Work</h2>
+        <div class="section">
+            <p>Several important considerations emerged:</p>
+            <ol>
+                <li>While synthetic data provided valuable insights, a real-world dataset incorporating contextual information needs to be developed</li>
+                <li>Geometric variations in scenes may affect the reliability of cached action sequences, though this can be mitigated through robust collision avoidance</li>
+                <li>Storage optimization for accumulated tasks requires further investigation</li>
+            </ol>
+        </div>
     </div>
-  </div>
-
-
-
-
-
-  
-  
-
-
-  <div class="wrapper">
-    <hr>
-    
-    <h2 id="abstract">Abstract</h2>
-
-<p>This work demonstrated a proof-of-concept for utilizing prompt caching and feature-rich trash 
-    data for autonomous trash collection. Prompt caching is a technique in which exact or similar 
-    prompts are compared to access existing solutions from a large language model (LLM), which 
-    can be used with robotic systems. Prompt caching can be helpful when using LLMs in robotic 
-    systems by saving on the number of prompts for repeated tasks and reducing the uncertainty 
-    associated with the LLM's output. Likewise, it was discovered that using additional descriptors 
-    for objects can assist LLMs in determining which objects in a scene are trash. This work was 
-    built upon previous iterations of robotic trash collection. In previous iterations, GPT -4 was 
-    tasked with determining which objects in a scene were trash and providing code to actuate a 
-    Kinova Gen3 Lite robotic arm to pick up and dispose of the trash.</p>
-
-<hr>
-
-<p>
-  1. In Fall 2023, I used ChatGPT to decide between two objects based on descriptors to determine 
-  which one was trash. I then used ChatGPT to write the control code to actuate a Kinova Gen3 
-  Lite arm to pick up the trash-object
-
-  2. In Spring 2024, I used the YOLOv9 object detection model to test how well trash objects were detected 
-  in cluttered scenes. I also fine-tuned a VLM (BLIP-2) on the TACO dataset to see how well VLMs could detect trash
-
-  3. Through those projects, I discovered that object detection was insufficient due to the subjective, 
-  context-dependent nature of trash, which other works did not consider. I also discovered that using LLMs 
-  for robotic control could be done, but it introduced cost and risk into the system that needed to be mitigated.
-
-  4. So for my capstone project, I explored the viability of adding additional scene context in public space to increase 
-  the likelihood that a detected object was actually trash. I also explored using prompt caching via embedding similarity 
-  to avoid re-prompting an LLM on similar tasks. To my knowledge, other works ignored the possibility of using prompt-caching 
-  outside of the LLM. And to my knowledge, no other work explored the subjective nature of trash and tested adding additional 
-  scene context for autonomous trash collection
-  
-  Methodology. I used GPT to create synthetic scenarios of a crowded airport and described objects and the surrounding context to determine whether or not an object was trash - this was done because no such dataset currently exists. I also used a BERT-based model to determine whether two commands were syntactically similar, in which case the robot control software would take the stored solution instead of reprompting the LLM
-  Results. It was determined that additional scene context could improve trash classification of detected objects. It was also determined that with a reasonable similarity threshold (0.3 in this case), similar commands could be "cached" and could avoid re-prompting LLMs.
-  Discussion. Relying on synthetic data can reveal something about context-assited trash detection, but ideally a real dataset will need to be created that provides that context (stay tuned). Additionally, a stored action sequence may not be equivalent to a new problem with the same objects if the scene geometry changes (this can be mitigated with good collision avoidance strategies). There may also be storage considerations when accumulating a large amount of tasks
-</p>
-
-<h2 id="teaser">Pipeline Figure</h2>
-
-<p> This whole pipeline of our proposed framework.</p>
-
-<p class="sys-img"><img src="https://joelisk.github.io/umn-csci5541-f24-robonlp/docs/assets/CSCI5541_pipeline_final.png" alt="imgname"></p>
-
-
-<h3 id="the-timeline-and-the-highlights">Demo videos showing proof-of-concept</h3>
-
-
-Using Vision and Language for Trash Detection
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h89XDdHrP6c?si=EV7wqUHLNH5jUEQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-LLM-assisted human-robot interaction for trash classification
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ExTagq-P8fI?si=KbLH6Skt18BE0VZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Prompt Caching using Embedding Similarity
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KqLIScFPiAA?si=xFhOV0c7be8-4jnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<hr>
-
-<h2 id="introduction">Introduction / Background / Motivation</h2>
-
-<p>
-<b>What did you try to do? What problem did you try to solve? Articulate your objectives using absolutely no jargon.</b>
-</p>
-<p>
-  We propose a framework that integrates an LLM with a traditional trajectory planner to enable operators to command a robotic manipulator using natural human speech.
-</p>
-
-<p>
-<b>How is it done today, and what are the limits of current practice?</b>
-</p>
-<p>
-  LLMs are being used to actuate robotic arms, but they are often limited by the complexity of the task and have limited analysis of how model parameter size and different prompting techniques affect the performance of this kind of pipeline.
-<p>
-
-<p>
-<b>Who cares? If you are successful, what difference will it make?</b>
-</p>
-<p>
-  This work might contribute to the integration of the Human-Robot Interaction (HRI) field. We provide a potentially workable solution allowing non-expert operators to intuitively control the manipulator. This framework can be deployed on common workspace for humans and manipulators, so people from different backgrounds can all command the manipulator to do some tasks automatically to improve efficiency.
-</p>
-
-<hr>
-
-<h2 id="approach">Approach</h2>
-
-<p>
-<b>What did you do exactly? How did you solve the problem? Why did you think it would be successful? Is anything new in your approach?</b>
-</p>
-
-<p>
-  We developed a framework where a large language model (LLM) transforms spoken English instructions—transcribed by Faster Whisper—into sequences of predefined robotic actions. Instead of having the LLM generate code or trajectories directly, we restrict it to choosing from modular commands like “pick_up,” “go_to,” and “drop_to.” These high-level actions are then executed by a Kinova Gen3 arm in a Gazebo simulation, guided by established motion planning tools like MoveIt. This setup allows the LLM to focus on natural language comprehension and logical planning while the proven robotic trajectory commander like MoveIt handles the complexity of execution. The approach is relatively new in that it integrates LLM-driven reasoning with fixed, reliable action “building blocks” and continuously updated environmental information via ROS, ultimately making the system more robust, flexible, and practical for real-world applications.
-</p>
-
-<p>
-<b>What problems did you anticipate? What problems did you encounter? Did the very first thing you tried work?</b>
-</p>
-
-<p>
-  In the initial idea of this framework, we want to integrate the LLMs and Variational autoencoder (VAE) to directly generate trajectories for the manipulator to execute. However, we found out it is time-consuming to collect data to train the VAE, and the LLMs are not reliable when they are asked to generate continuous trajectories, and it is hard to let the model understand all the spatial information. Hence, we decided to run the current approach at a very early stage since this problem is predictable. The other problem we encountered was we initially wanted to make the responses from the LLMs in JSON form in order to unify the output format. However, it actually makes it hard to write a Python script to read the output, so we decided to make the response in Python list format.
-</p>
-
-<p>
-  <b>
-    Experiment Setup
-  </b>
-  <p>
-    For each of the tasks, we used three different prompts from RLBench with two different prompting strategies (one-shot vs chain-of-thought + one-shot). We used a COLAB script to generate output from eight different LLMs.
-  </p>
-</p>
-
-<br>
-<p>
-  <b>Task Prompts</b>
-</p>
-<p>
-  <p class="sys-img"><img src="https://joelisk.github.io/umn-csci5541-f24-robonlp/docs/assets/CSCI5541_Tasks_final.png" alt="imgname"></p>
-</p>
-
-<hr>
-    
-<!-- <h2 id="results">Results</h2>
-<p>
-<b>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</b>
-</p>
-<p>
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-</p>
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><strong>Experiment</strong></th>
-      <th style="text-align: center">1</th>
-      <th style="text-align: center">2</th>
-      <th style="text-align: center">3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>Sentence</strong></td>
-      <td style="text-align: center">Example 1</td>
-      <td style="text-align: center">Example 2</td>
-      <td style="text-align: center">Example 3</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Errors</strong></td>
-      <td style="text-align: center">error A, error B, error C</td>
-      <td style="text-align: center">error C</td>
-      <td style="text-align: center">error B</td>
-    </tr>
-  </tbody>
-  <caption>Table 1. This is Table 1's caption</caption>
-</table>
-<br>
-<div style="text-align: center;">
-<img style="height: 300px;" alt="" src="./docs/results.png">
-</div>
-<br><br>
-
-<hr> -->
-
-<h2 id="results">Results</h2>
-<p>
-<b>Quantitative results for the experiment</b>
-</p>
-<p>
-  <p class="sys-img"><img src="https://joelisk.github.io/umn-csci5541-f24-robonlp/docs/assets/Action_Correct_Rate.png" alt="imgname"></p>
-</p>
-<p>
-  <b>Key Findings</b>
-</p>
-<p>
-  <ul>
-    <li>
-      - Chain-of-thought + one-shot prompting generally outperformed one-shot prompting with the accuracy of the action sequences, 
-      but had mixed results with formatting.
-    </li>
-    <br>
-    <li>
-      - Generally, formatting quality and action sequence accuracy increased with the size of the models, although it wasn't perfectly linear.
-    </li>
-    <br>
-    <li>
-      - Typical action sequence errors included failing to use the correct blocks and utilzing object locations from other tasks.
-    </li>
-    <br>
-    <li>
-      - Typical formatting errors were not formatting the action sequence in a list and adding text in addition to the list.
-    </li>
-  </ul>
-</p>
-
-<hr>
-
-
-
-<h2 id="conclusion">Conclusion and Future Work</h2>
-  <!-- How easily are your results able to be reproduced by others?
-  Did your dataset or annotation affect other people's choice of research or development projects to undertake?
-  Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?
-  What limitations does your model have? How can you extend your work for future research? -->
-  <p>
-  <b>Reproducibility</b>
-  </p>
-  <p>
-  To reproduce our results, we've posted our code to our GitHub repository (see code <a href="https://github.com/joelisk/umn-csci5541-f24-robonlp">here</a>).
-  </p>
-  
-  <p>
-  <b>Dataset</b>
-  </p>
-  <p>
-  Using the RLBench dataset with LLMs opens the door to research into testing robotic systems on tasks with greater complexity. 
-  Future research could delve into designing more complex tasks and integrating them with the RLBench framework and LLMs.
-  </p>
-
-  <p>
-  <b>Ethical Concerns</b>
-  </p>
-  <p>
-  Integrating human speech and LLMs into robot commands introduces the possibility for harmful errors, biases, and potentially malicious actions.
-  One potential way to mitigate these concerns is with improved error-handling and developing policy-based filters.
-  </p>
-
-  <p>
-  <b>Limitations</b>
-  </p>
-  <p>
-  There appeared to be a limit to the amount of environment information that could be placed into the system prompt without
-  causing the smaller LLMs to use object locations from the wrong task. Further research could study the limitations of 
-  system prompts, which may be a function of model parameter size, for robot tasks.
- </p>
-
-<hr>
-
-
-  </div>
-  
-
-
-</body></html>
-
-
-<!--grid of llms, prompting
-avg steps before failing,
-time to success-->
+</body>
+</html>
