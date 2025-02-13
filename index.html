@@ -212,10 +212,25 @@
             <p>The research employed two complementary approaches:</p>
             <ol>
                 <li>Synthetic Data Generation
-                    <div class="insight">Used GPT to create crowded airport scenarios due to the current lack of contextually-rich trash detection datasets. This approach allowed for controlled testing of context-based classification.</div>
+                    <div class="insight">Used GPT to create crowded airport scenarios due to the current lack of contextually-rich trash detection datasets. This approach allowed for controlled testing of context-based classification. To avoid any potential interference via RAG, examples were tested on Llama 3.2 8B Instruct</div>
                 </li>
                 <li>BERT-based Similarity Analysis
-                    <div class="insight">Implemented command similarity detection to enable efficient caching of robot control solutions, reducing the need for repeated LLM queries.</div>
+                    <div class="insight">Implemented command similarity detection using the all-MiniLM-L6-v2 model to enable efficient caching of robot control solutions, reducing the need for repeated LLM queries.</div>
+                </li>
+            </ol>
+        </div>
+
+        <h2>Trash Classification Examples</h2>
+        <div class="section">
+            <ol>
+                <li> Tier 1: Binary Classification, Simple Context:
+                    <div class="insight">"There are two objects in the environment: an empty can of soda and a full can of soda. Which object is most likely to be trash?"</div>
+                </li>
+                <li> Tier 2: Multi-Object Classification, No Context Beyond Object Labels:
+                    <div class="insight">"Your object detection system found the following objects in the scene: 1 person, 1 bottle, 2 bowls, 1 sandwich, 2 chairs, 2 dining tables. Which of these objects is most likely to be trash?"</div>
+                </li>
+                <li> Tier 3: Multi-Object Classification, Rich Context:
+                    <div class="insight">"In the airport terminal, there are scattered sheets of paper with coffee stains, a set of mittens soaked in coffee, and a stainless steel coffee mug on its side, all lying next to an open suitcase that appears to have fallen over. Which of these objects is most likely to be trash?"</div>
                 </li>
             </ol>
         </div>
