@@ -265,6 +265,22 @@
             </ol>
         </div>
 
+        <h2>Prompt Caching Algorithm</h2>
+        <div class="section">
+            <p>The prompt caching algorithm consisted of three main steps:</p>
+            <ol>
+                <li>Embedding Generation
+                    <div class="insight">The prompt and response were encoded into embeddings using the MiniLM-L6-v2 model.</div>
+                </li>
+                <li>Similarity Calculation
+                    <div class="insight">The cosine similarity between the new prompt and the cached prompts was calculated to determine if the new prompt was similar enough to an existing one.</div>
+                </li>
+                <li>Cache Update
+                    <div class="insight">If the similarity exceeded a predefined threshold, the response from the cached prompt was used. Otherwise, the new prompt was sent to the LLM for processing.</div>
+                </li>
+            </ol>
+        </div>
+
         <h2>Results</h2>
         <div class="highlight">
             <p>The research yielded two significant findings:</p>
@@ -273,6 +289,9 @@
                 <li>Command caching with a 0.3 similarity threshold effectively reduced LLM query requirements while maintaining system reliability</li>
             </ol>
         </div>
+
+        <img src="https://joelisk.github.io/umn-f24-rob8760-capstone-project/assets/similarityscores.png" alt="similarity scores" class="img">
+        <div class="insight">image: similarity scores to the command "pick up trash". Trash scores are similar commands, nontrash scores are dissimilar commands</div>
 
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ExTagq-P8fI?si=KbLH6Skt18BE0VZN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
